@@ -56,6 +56,6 @@
             }
             else Numero = 0;
         }
-        Console.WriteLine("Fim de execução");
+        Console.WriteLine("Fim de execuçãum");
     }
 }
