@@ -15,5 +15,6 @@
             Numero  = int.Parse(Console.ReadLine());
             if (Numero > 0 & Numero < 11)Console.Write($"{Numero}! = {FatorialRecursivo(Numero)}\n\n\n");
         }
+        Console.WriteLine("Fim da execução");
     }
 }
