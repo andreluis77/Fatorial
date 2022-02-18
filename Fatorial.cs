@@ -1,4 +1,5 @@
-﻿public class Fatorial
+﻿using System;
+public class Fatorial
 {
     static int FatorialRecursivo(int Numero)
     {
@@ -22,6 +23,7 @@
     {
         int Numero = 1;
         string Escolha = " ";
+        bool EntradaInvalida = false;
 
         while (Numero != 0)
         {
@@ -40,8 +42,22 @@
 
             if (Escolha != "0")
             {
-                Console.Write("Informe um número entre 1 e 10 para calcular o fatorial (0 para sair): ");
-                Numero = int.Parse(Console.ReadLine());
+                do
+                {
+                    try
+                    {
+                        EntradaInvalida = false;
+                        Console.Write("Informe um número entre 1 e 10 para calcular o fatorial (0 para sair): ");
+                        Numero = int.Parse(Console.ReadLine());
+                    }
+                    catch
+                    {
+                        EntradaInvalida = true;
+                        Numero = 0;
+                        Console.WriteLine("Somente entradas numéricas são aceitas\n");
+                    }
+                }
+                while (EntradaInvalida);
 
                 if (Escolha == "R")
                 {
