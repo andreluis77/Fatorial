@@ -53,7 +53,6 @@ public class Fatorial
                     catch
                     {
                         EntradaInvalida = true;
-                        Numero = 0;
                         Console.WriteLine("Somente entradas numéricas são aceitas\n");
                     }
                 }
